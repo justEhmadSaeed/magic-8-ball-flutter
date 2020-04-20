@@ -16,10 +16,29 @@ class BallPage extends StatelessWidget {
         ),
         backgroundColor: Colors.blue[900],
       ),
-      body: Container(
-        
-      ),
       backgroundColor: Colors.blue,
+      body: Ball(),
+    );
+  }
+}
+
+class Ball extends StatefulWidget {
+  @override
+  _BallState createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: FlatButton(
+        onPressed: () {
+          print('I got pressed');
+        },
+        child: Center(child: Image.asset('images/ball1.png')),
+        splashColor: Colors.blue[900],
+        highlightColor: Colors.transparent,
+      ),
     );
   }
 }
